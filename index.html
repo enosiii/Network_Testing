@@ -633,23 +633,41 @@
           }
         }
 
+        // // Add section headers at row 7
+        // worksheet.getCell('A7').value = '2G - Cell Info';
+        // worksheet.getCell('E7').value = '3G - Speedtest';
+        // worksheet.getCell('H7').value = '3G - IP';
+        // worksheet.getCell('L7').value = '3G - Cell Info';
+        // worksheet.getCell('P7').value = 'LTE - Speedtest';
+        // worksheet.getCell('T7').value = 'LTE - IP';
+        // worksheet.getCell('X7').value = 'LTE - Cell Info';
+
         // Add section headers at row 7
         worksheet.getCell('A7').value = '2G - Cell Info';
         worksheet.getCell('E7').value = '3G - Speedtest';
         worksheet.getCell('H7').value = '3G - IP';
         worksheet.getCell('L7').value = '3G - Cell Info';
-        worksheet.getCell('P7').value = 'LTE - Speedtest';
-        worksheet.getCell('T7').value = 'LTE - IP';
-        worksheet.getCell('X7').value = 'LTE - Cell Info';
+        worksheet.getCell('E38').value = 'LTE - Speedtest';
+        worksheet.getCell('H38').value = 'LTE - IP';
+        worksheet.getCell('L38').value = 'LTE - Cell Info';
+
+        // // Process images with proper aspect ratio
+        // await processImage(workbook, worksheet, 'netMonitor2g', { row: 8, col: 0 });
+        // await processImage(workbook, worksheet, 'netMonitor3g', { row: 8, col: 11 });
+        // await processImage(workbook, worksheet, 'speedtest3g', { row: 8, col: 4 });
+        // await processImage(workbook, worksheet, 'ipChicken3g', { row: 8, col: 7 });
+        // await processImage(workbook, worksheet, 'netMonitorLte', { row: 8, col: 23 });
+        // await processImage(workbook, worksheet, 'speedtestLte', { row: 8, col: 15 });
+        // await processImage(workbook, worksheet, 'ipChickenLte', { row: 8, col: 19 });
 
         // Process images with proper aspect ratio
         await processImage(workbook, worksheet, 'netMonitor2g', { row: 8, col: 0 });
         await processImage(workbook, worksheet, 'netMonitor3g', { row: 8, col: 11 });
         await processImage(workbook, worksheet, 'speedtest3g', { row: 8, col: 4 });
         await processImage(workbook, worksheet, 'ipChicken3g', { row: 8, col: 7 });
-        await processImage(workbook, worksheet, 'netMonitorLte', { row: 8, col: 23 });
-        await processImage(workbook, worksheet, 'speedtestLte', { row: 8, col: 15 });
-        await processImage(workbook, worksheet, 'ipChickenLte', { row: 8, col: 19 });
+        await processImage(workbook, worksheet, 'netMonitorLte', { row: 39, col: 11 });
+        await processImage(workbook, worksheet, 'speedtestLte', { row: 39, col: 4 });
+        await processImage(workbook, worksheet, 'ipChickenLte', { row: 39, col: 7 });
 
         // Generate Excel file
         const buffer = await workbook.xlsx.writeBuffer();
