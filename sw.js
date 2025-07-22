@@ -1,4 +1,4 @@
-const CACHE_NAME = 'Network_Testing-v1';
+const CACHE_NAME = 'Network_Testing-v2';
 const ASSETS_TO_CACHE = [
   '/Network_Testing/',
   '/Network_Testing/index.html',
